@@ -1,10 +1,10 @@
-name: first workflow
+name: manual workflow
 
 on: 
   workflow_dispatch:
 
 jobs:
-  first-workflow:
+  manual-workflow:
     runs-on: ubuntu-latest
 
     steps:
