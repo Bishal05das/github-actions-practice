@@ -23,4 +23,5 @@ jobs:
           name: "${{ github.event.inputs.name }}"
 
       - name: Print Message
-        run: echo "The greeting message is: ${{ steps.greet.outputs.message }}"
+        run: |
+          echo "The greeting message is: ${{ steps.greet.outputs.message }}"
