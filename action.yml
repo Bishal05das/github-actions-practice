@@ -1,0 +1,27 @@
+name: Greeting Generator Composite Action
+description: a composite action that generates greeting
+
+
+inputs:
+  name:
+    description: the name of the person to greet
+    required: true
+    default: 'unnamed'
+
+outputs:
+  message:
+    description: the greeting message
+    value: ${{steps.greeting.outputs.message}}
+
+
+
+runs:
+  using: composite
+    steps:
+    - name: Generate greeting
+      shell: bash
+      id: greeting
+      run: |
+        echo "message=hello ${{inputs.name}}!" >> $GITHUB_OUTPUT
+
+
