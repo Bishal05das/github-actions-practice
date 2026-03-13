@@ -1,0 +1,25 @@
+name: matrix workflow
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  manual-workflow:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        uppercase: [A,B,C]
+        lowercase: [a,b,c]
+
+    steps:
+     - name: echo message
+       run: |
+        echo "matrix"
+
+     - name: echo uppercase
+       run: |
+        echo ${{matrix.uppercase}}
+
+     - name: echo matrix all
+       run: |
+        echo "matrix is: ${{matrix.uppercase}} ${{matrix.lowercase}}"
