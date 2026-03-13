@@ -16,6 +16,7 @@ jobs:
 
     steps:
      - name: generate-messsage
+       id: generate-message
        run: |
         echo "message=hello ${{github.event.inputs.name}}!" >> $GITHUB_OUTPUT
 
