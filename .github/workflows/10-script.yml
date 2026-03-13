@@ -1,0 +1,19 @@
+name: script workflow
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  script-workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: checkout code
+       uses: actions/checkout@v4
+
+     - name: First Step
+       run: |
+        echo "hello script workflow"
+
+     - name: run python script
+       run: python script.py
