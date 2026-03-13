@@ -12,7 +12,7 @@ jobs:
   get-value:
     runs-on: ubuntu-latest
     outputs:
-      greetings_message: ${{steps.generate-messsage.outputs.message}}
+      greetings_message: ${{steps.generate-message.outputs.message}}
 
     steps:
      - name: generate-messsage
