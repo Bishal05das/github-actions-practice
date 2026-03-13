@@ -1,0 +1,20 @@
+name: script workflow
+
+on: 
+  workflow_call:
+
+jobs:
+  script-workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: checkout code
+       uses: actions/checkout@v4
+
+     - name: Image building
+       run: |
+        echo "docker image building"
+
+     - name: image pushing
+       run: |
+        echo "docker image pushing"
