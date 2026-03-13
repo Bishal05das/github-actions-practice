@@ -9,4 +9,4 @@ on:
 
 jobs:
   conditional-workflow:
-    uses: Bishal05das/github-actions-practice/.github/workflows/11-reuseable-workflow.yml
+    uses: Bishal05das/github-actions-practice/.github/workflows/11-reuseable-workflow.yml@main
