@@ -12,9 +12,9 @@ jobs:
        run: node -v
 
      - name: setup nodejs
-       uses: actions/setup-node@v6
+       uses: actions/setup-node@v4
        with:
         node-version: '24'
 
      - name: Nodejs version
-        run: node -v
+       run: node -v
