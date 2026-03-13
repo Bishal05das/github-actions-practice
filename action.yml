@@ -17,11 +17,11 @@ outputs:
 
 runs:
   using: composite
-    steps:
-    - name: Generate greeting
-      shell: bash
-      id: greeting
-      run: |
-        echo "message=hello ${{inputs.name}}!" >> $GITHUB_OUTPUT
+  steps:
+  - name: Generate greeting
+    shell: bash
+    id: greeting
+    run: |
+      echo "message=hello ${{inputs.name}}!" >> $GITHUB_OUTPUT
 
 
