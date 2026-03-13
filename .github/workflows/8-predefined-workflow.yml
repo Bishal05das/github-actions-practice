@@ -10,3 +10,11 @@ jobs:
     steps:
      - name: Nodejs version
        run: node -v
+
+     - name: setup nodejs
+       uses: actions/setup-node@v6
+       with:
+        node-version: '24'
+
+     - name: Nodejs version
+        run: node -v
